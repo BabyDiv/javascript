@@ -22,6 +22,7 @@ let squares = document.querySelector('.squares');
 let triangle = document.getElementById('triangle');
 let div = document.createElement('div');
 let paragraph = document.createElement('p');
+let button = document.querySelectorAll('.buttons__item');
 
 circle[0].style.backgroundColor = 'purple';
 square[1].style.borderRadius = '50%';
@@ -49,3 +50,16 @@ circles.replaceChild(square[0], circle[0]);
 
 // paragraph.innerHTML = '<a>Ы</a>';
 // paragraph.textContent = 'ЫЫЫЫЫЫЫ';
+
+// button[1].onclick = function() {
+//   button[1].style.backgroundColor = 'black';
+// }
+
+button.forEach(function(item) {
+  item.addEventListener('mouseover', function() {
+    item.style.backgroundColor = 'lightgreen';
+  });
+  item.addEventListener('mouseleave', function() {
+    item.style.backgroundColor = 'turquoise';
+  })
+});
