@@ -1,0 +1,33 @@
+
+
+.circles,
+.squares,
+.triangles {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    margin: 102px 0 0 102px;
+}
+
+.circles__item {
+    width: 102px;
+    height: 102px;
+    background-color: turquoise;
+    border-radius: 50%;
+}
+
+.squares__item {
+    width: 102px;
+    height: 102px;
+    background-color: plum;
+    border-radius: 10%;
+}
+
+.triangles__item {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 80px solid lightskyblue;
+}
+
