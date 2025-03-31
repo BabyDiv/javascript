@@ -20,9 +20,13 @@ let square = document.getElementsByClassName('squares__item');
 let circles = document.querySelector('.circles');
 let squares = document.querySelector('.squares');
 let triangle = document.getElementById('triangle');
+let link = document.querySelectorAll('.links__item');
 let div = document.createElement('div');
 let paragraph = document.createElement('p');
 let button = document.querySelectorAll('.buttons__item');
+let scrollButton = document.querySelector('.scroll__button');
+let scrollToTop = document.querySelector('.scroll__to-top');
+let scrollBox = document.querySelector('.scroll__box');
 
 circle[0].style.backgroundColor = 'purple';
 square[1].style.borderRadius = '50%';
@@ -63,3 +67,33 @@ button.forEach(function(item) {
     item.style.backgroundColor = 'turquoise';
   })
 });
+
+link.forEach(function(item) {
+  item.addEventListener('click', function(event) {
+    event.preventDefault();
+  });
+
+  item.addEventListener('click', function() {
+    item.style.color = 'darkturquoise';
+  });
+
+  item.addEventListener('mouseleave', function() {
+    item.style.color = 'darkcyan';
+  });
+});
+
+let isExpanded = false;
+
+scrollButton.addEventListener('click', function() {
+  if (isExpanded) {
+    scrollBox.style.height = '200px';
+  } else {
+    scrollBox.style.height = scrollBox.scrollHeight + 'px';
+  }
+
+  isExpanded = !isExpanded;
+});
+
+scrollToTop.addEventListener('click', function() {
+  scrollBox.scrollTop = 0;
+})
