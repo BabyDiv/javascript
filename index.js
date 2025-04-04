@@ -97,3 +97,24 @@ scrollButton.addEventListener('click', function() {
 scrollToTop.addEventListener('click', function() {
   scrollBox.scrollTop = 0;
 })
+
+function createUser(name, id) {
+  this.name = name;
+  this.id = id;
+  this.human = true;
+  this.hello = function() {
+    console.log('Hello ' + this.name);
+  }
+  this.hello();
+}
+
+let ivan = new createUser('Ivan', 27);
+let alex = new createUser('Alex', 27);
+console.log(ivan);
+console.log(alex);
+
+let name = 'Vasya',
+age = 27,
+mail = 'vasya@mail.com';
+
+document.write(`Этот сайт создал ${name}. Мне ${age} лет. Связаться со мной можно по почте: ${mail}`);
